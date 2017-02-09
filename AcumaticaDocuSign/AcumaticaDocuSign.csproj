@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AcumaticaDocuSign</RootNamespace>
+    <AssemblyName>AcumaticaDocuSign</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocuSign, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DocuSign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Acumatica ERP\ACMDocusignV2\Bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Common">
+      <HintPath>..\..\..\..\Program Files (x86)\Acumatica ERP\ACMDocusignV2\Bin\PX.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Data">
+      <HintPath>..\..\..\..\Program Files (x86)\Acumatica ERP\ACMDocusignV2\Bin\PX.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Objects">
+      <HintPath>..\..\..\..\Program Files (x86)\Acumatica ERP\ACMDocusignV2\Bin\PX.Objects.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=100.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Acumatica ERP\ACMDocusignV2\Bin\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcumaticaDocuSign\Descriptor\Constants.cs" />
+    <Compile Include="AcumaticaDocuSign\DAC\DocuSignAccount.cs" />
+    <Compile Include="AcumaticaDocuSign\DAC\DocuSignAccountUserRule.cs" />
+    <Compile Include="AcumaticaDocuSign\DAC\DocuSignEnvelopeInfo.cs" />
+    <Compile Include="AcumaticaDocuSign\DAC\DocuSignRecipient.cs" />
+    <Compile Include="AcumaticaDocuSign\Descriptor\Messages.cs" />
+    <Compile Include="AcumaticaDocuSign\DAC\EnvelopeFilter.cs" />
+    <Compile Include="AcumaticaDocuSign\DAC\VoidRequestFilter.cs" />
+    <Compile Include="AR\ARInvoiceDSExt.cs" />
+    <Compile Include="CR\CROpportunityDSExt.cs" />
+    <Compile Include="PO\POOrderDSExt.cs" />
+    <Compile Include="SM\WikiFileMaintenanceDSExt.cs" />
+    <Compile Include="AcumaticaDocuSign\DocuSignAccountEntry.cs" />
+    <Compile Include="AcumaticaDocuSign\DocuSignDocumentSummaryEnq.cs" />
+    <Compile Include="AcumaticaDocuSign\DocuSignEnvelopeEnq.cs" />
+    <Compile Include="AcumaticaDocuSign\DocuSignSyncProcess.cs" />
+    <Compile Include="AcumaticaDocuSign\Helpers\ErrorCodeHelper.cs" />
+    <Compile Include="AcumaticaDocuSign\Models\ApiErrorModel.cs" />
+    <Compile Include="AcumaticaDocuSign\Models\BaseRequestModel.cs" />
+    <Compile Include="AcumaticaDocuSign\Models\CreateEnvelopeRequestModel.cs" />
+    <Compile Include="AcumaticaDocuSign\Models\CreateEnvelopeResponseModel.cs" />
+    <Compile Include="AcumaticaDocuSign\Models\GetEnvelopeDocumentResponseModel.cs" />
+    <Compile Include="AcumaticaDocuSign\Models\GetEnvelopeHistoryResponseModel.cs" />
+    <Compile Include="AcumaticaDocuSign\Models\UpdateEnvelopeResponseModel.cs" />
+    <Compile Include="AcumaticaDocuSign\Models\VoidEnvelopeRequestModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AcumaticaDocuSign\Services\DocuSignService.cs" />
+    <Compile Include="SO\SOOrderDSExt.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
