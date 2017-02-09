@@ -13,6 +13,8 @@ With DocuSign for Acumatica, users can:
 Note: DocuSign account is required to use this integration.
 More info here: https://www.docusign.com/b/products-and-pricing
 
+Please visit https://www.docusign.com/developer-center/api-overview#go-live to get Integrator Key.
+
 ###Prerequisites
 * Acumatica 6.0 or higher
 
@@ -20,7 +22,7 @@ Getting Started
 -----------
 
 ### Install DocuSign Customization Project
-1. Download AcumaticaDocuSignPackage.zip from this repository
+1. Download AcumaticaDocuSignPackage.zip from https://portal.acumatica.com/downloads/docusignintegration/
 2. In your Acumatica ERP instance, import this as a customization project
 3. Publish the customization project
 
