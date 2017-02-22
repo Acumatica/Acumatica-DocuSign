@@ -61,7 +61,7 @@ User can check the status the documents in the new “DocuSign Central”. Here 
 
 ![Screenshot](/_ReadMeImages/Image7.png)
 
-Users can check the status of documents either manually or by scheduling a synch from the “DocSign Sync” screen in Configuration -> Document Management”. In this screen, users can manually get the status update by either using “PROCESS” or “PROCESS ALL” options. This action will perform a synch with DocuSign and retrieve latest status information for the documents in the queue.
+Users can check the status of documents either manually or by scheduling a synch from the “DocuSign Sync” screen in Configuration -> Document Management”. In this screen, users can manually get the status update by either using “PROCESS” or “PROCESS ALL” options. This action will perform a synch with DocuSign and retrieve latest status information for the documents in the queue.
 Alternatively, users can setup a synch frequency using the  ”Schedules” option to automaticaly retrieve status at specified schedule.
 
 ![Screenshot](/_ReadMeImages/Image8.png)
