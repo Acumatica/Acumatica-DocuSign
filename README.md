@@ -15,7 +15,7 @@ More info here: https://www.docusign.com/b/products-and-pricing
 
 Please visit https://www.docusign.com/developer-center/api-overview#go-live to get Integrator Key.
 
-###Prerequisites
+### Prerequisites
 * Acumatica 6.0 or higher
 
 Getting Started
