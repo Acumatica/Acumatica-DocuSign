@@ -49,7 +49,7 @@ namespace AcumaticaDocuSign
         [PXParent(
             typeof(Select<DocuSignEnvelopeInfo,
                         Where<DocuSignEnvelopeInfo.envelopeInfoID,
-                            Equal<Current<DocuSignEnvelopeInfo.envelopeInfoID>>>>))]
+                            Equal<Current<DocuSignRecipient.envelopeInfoID>>>>))]
         public virtual int? EnvelopeInfoID
         {
             get
